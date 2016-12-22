@@ -1,0 +1,16 @@
+header {
+  float: left;
+  h1 {
+    font-family: $font-header, sans-serif;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 25px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+  .description {
+    display: none;
+  }
+}

@@ -1,0 +1,58 @@
+html {
+  background-color: $bg-light-grey;
+}
+#wrapper {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+
+  #main {
+    clear: both;
+    .content {
+      width: 75%;
+      float: left;
+
+      .post {
+        background-color: $bg-white;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        border: 1px solid #ddd;
+
+        h2 {
+          margin: 0;
+          a {
+            font-family: 'Raleway', sans-serif;
+            text-decoration: none;
+            font-size: $font-size-xxl;
+          }
+        }
+        h2, p, .moretag {
+          padding: 10px;
+        }
+        p {
+          margin-top: 0;
+          padding-top: 0;
+        }
+      }
+    }
+  }
+
+  #post {
+    clear: both;
+    width: 75%;
+    float: left;
+    background-color: $bg-white;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+  }
+
+  #page {
+    clear: both;
+  }
+
+  #delimiter {
+    clear: both;
+  }
+}
