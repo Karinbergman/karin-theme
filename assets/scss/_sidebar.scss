@@ -9,5 +9,48 @@
   h4 {
     font-family: 'Raleway', sans-serif;
     font-size: $font-size-xxl;
+    margin-bottom: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li {
+      padding-bottom: 10px;
+      display: inline-block;
+
+      &:nth-child(odd) {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+      a {
+        img {
+          width: 70px;
+        }
+      }
+    }
+  }
+
+  #searchform {
+    .screen-reader-text {
+      display: none;
+    }
+    input {
+      height: 30px;
+    }
+
+    #searchsubmit {
+      margin-top: 10px;
+    }
+  }
+
+  .tagcloud {
+    margin-top: 20px;
+    a {
+      background: #ededed;
+      padding: 10px;
+      color: black;
+      text-decoration: none;
+    }
   }
 }

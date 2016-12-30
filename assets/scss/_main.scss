@@ -4,7 +4,7 @@ html {
 }
 #wrapper {
   display: block;
-  width: 80%;
+  width: 1024px;
   margin: 0 auto;
   padding: 30px;
 
@@ -16,12 +16,14 @@ html {
 
       .post {
         background-color: $bg-white;
-        padding-bottom: 20px;
         margin-bottom: 30px;
         border: 1px solid #ddd;
 
         h2 {
-          margin: 0;
+          padding: 10px 10px 0 10px;
+          margin-top: 0;
+          margin-bottom: 10px;
+
           a {
             font-family: 'Raleway', sans-serif;
             text-decoration: none;
@@ -31,8 +33,49 @@ html {
         h2, p, .moretag {
           padding: 10px;
         }
+        .post-info {
+          margin-bottom: 10px;
+          .date {
+            padding-right: 10px;
+            padding-left: 10px;
+            &:before {
+              @extend .icomoon;
+              @extend .icon-calendar:before;
+              padding-right: 10px;
+              font-size: $font-size-xl;
+              position: relative;
+              top: 1px;
+            }
+          }
+          .category {
+            &:before {
+              @extend .icomoon;
+              @extend .icon-folder-open:before;
+              padding-right: 10px;
+              font-size: $font-size-xl;
+              position: relative;
+              top: 1px;
+            }
+          }
+        }
+        .moretag {
+          display: block;
+          text-align: right;
+          text-decoration: none;
+          font-weight: 600;
+          color: purple;
+
+          &:after {
+            @extend .icomoon;
+            @extend .icon-arrow-right:before;
+            padding-left: 7px;
+            position: relative;
+            top: 2px;
+            font-size: 16px;
+          }
+        }
         p {
-          margin-top: 0;
+          margin: 0;
           padding-top: 0;
         }
       }
@@ -47,6 +90,32 @@ html {
     padding: 10px;
     margin-bottom: 30px;
     border: 1px solid #ddd;
+
+    .post-info {
+      margin-bottom: 10px;
+      .date {
+        padding-right: 10px;
+        padding-left: 10px;
+        &:before {
+          @extend .icomoon;
+          @extend .icon-calendar:before;
+          padding-right: 10px;
+          font-size: $font-size-xl;
+          position: relative;
+          top: 1px;
+        }
+      }
+      .category {
+        &:before {
+          @extend .icomoon;
+          @extend .icon-folder-open:before;
+          padding-right: 10px;
+          font-size: $font-size-xl;
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
   }
 
   #page {

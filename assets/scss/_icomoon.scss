@@ -24,9 +24,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-calendar:before {
+  content: "\e900";
+}
+.icon-folder-open:before {
+  content: "\e930";
+}
 .icon-menu:before {
   content: "\e9bd";
 }
 .icon-cross:before {
   content: "\ea0f";
+}
+.icon-arrow-right:before {
+  content: "\ea34";
 }
