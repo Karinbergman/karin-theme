@@ -1,7 +1,4 @@
 <?php get_header(); ?>
-    <div id="nav">
-        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-    </div>
         <div id="post" class="content">
         <?php while ( have_posts() ) : the_post(); ?>
             <?php
@@ -13,15 +10,17 @@
                 <h2>
                     <?php echo "&nbsp;&rsaquo;&nbsp;"; the_title(); ?>
                 </h2>
-                <span><?php the_date('Y-m-d'); ?></span>
-                <span><?php the_category('&nbsp;&rsaquo;&nbsp;'); ?></span>
             <?php } else { ?>
                 <h1>
                     <?php echo "&nbsp;&rsaquo;&nbsp;"; the_title(); ?>
                 </h1>
-                <span><?php the_date('Y-m-d'); ?></span>
-                <span><?php the_category('&nbsp;&rsaquo;&nbsp;'); ?></span>
             <?php } ?>
+
+            <div class="post-info">
+                <span class="date"><?php the_date('Y-m-d'); ?></span>
+                <span class="category"><?php the_category('&nbsp;&rsaquo;&nbsp;'); ?></span>
+            </div>
+
             <?php the_content(); ?>
 
             // If comments are open or we have at least one comment, load up the comment template.
