@@ -1,7 +1,10 @@
 #sidebar {
-  width: 25%;
-  padding: 0 30px 10px 30px;
+  width: 22%;
+  padding: 0 20px 10px;
   float: right;
+  background: $bg-white;
+  margin: 0 10px;
+  border: 1px solid #ddd;
 
   h4 {
     font-family: 'Raleway', sans-serif;

@@ -1,8 +1,45 @@
 #nav {
-  float: right;
-  padding-right: 20px;
+  .navbar-inner {
+    .container {
+      h1 {
+        float: left;
+        margin: 0;
+        margin-bottom: 30px;
+        font-size: 25px;
+      }
+      .btn-navbar {
+        &.open:before {
+          @extend .icomoon;
+          @extend .icon-menu:before;
+          float: right;
+          font-size: 30px;
+          cursor: pointer;
+          position: relative;
+          right: 10px;
+        }
+        &.close:before {
+          @extend .icomoon;
+          @extend .icon-cross:before;
+          float: right;
+          font-size: 25px;
+          cursor: pointer;
+          position: relative;
+          top: 3px;
+          right: 10px;
+        }
+      }
+      .nav-collapse {
+        float: right;
+        &.collapse {
+          display: none;
+        }
+      }
+    }
+  }
   .menu-top-menu-container {
     ul {
+      margin-top: 2px;
+      margin-right: 10px;
       text-align: center;
       li {
         display: inline-block;

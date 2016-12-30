@@ -1,5 +1,8 @@
-header {
+.page-header {
   float: left;
+  margin: 0;
+  border-bottom: none;
+
   h1 {
     font-family: $font-header, sans-serif;
     text-align: center;
