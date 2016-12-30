@@ -1,7 +1,5 @@
 <?php get_header(); ?>
-<div id="nav">
-    <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-</div>
+
 <div id="main">
     <div class="content">
             <?php // Display blog posts on any page @ http://m0n.co/l
@@ -35,7 +33,7 @@
 
             <?php }  */?>
 
-            <?php wp_reset_postdata(); ?>
+        <?php wp_reset_query(); ?>
     </div>
     <?php get_sidebar(); ?>
 </div>

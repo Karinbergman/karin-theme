@@ -1,7 +1,5 @@
 <?php get_header(); ?>
-<div id="nav">
-    <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-</div>
+
 <div id="page">
     <hr>
     <?php while ( have_posts() ) : the_post(); ?>

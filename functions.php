@@ -60,4 +60,11 @@ register_sidebar(array('name'=>'sidebar2',
 
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'single-post-thumbnail', 590, 180 );
-//wp_enqueue_style( 'master', get_template_directory_uri() . '/build/css/master.css');
+
+// inkludera jquery från google i footer
+if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+function my_jquery_enqueue() {
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js", false, NULL, true);
+    wp_enqueue_script('jquery');
+}

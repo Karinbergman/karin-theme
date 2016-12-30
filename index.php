@@ -1,14 +1,9 @@
 <?php get_header(); ?>
-<div id="nav">
-    <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-</div>
+
 <div id="main">
     <div class="content">
         <section>
-            <?php // Display blog posts on any page @ http://m0n.co/l
-            $temp = $wp_query; $wp_query= null;
-            $wp_query = new WP_Query(); $wp_query->query('showposts=5' . '&paged='.$paged);
-            while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+            <?php while ( have_posts() ) : the_post(); ?>
 
                 <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
                 <?php the_excerpt(); ?>
@@ -17,6 +12,13 @@
             <?php endwhile; ?>
 
             <!-- TODO: fix next and prev links -->
+            <?php if (  $wp_query->max_num_pages > 1 ) : ?>
+                <nav class="nav-pager">
+                    <div class="nav-fore"><?php next_posts_link( __( '← Äldre inlägg' ) ); ?></div>
+                    <div class="nav-efter"><?php previous_posts_link( __( 'Nyare inlägg →' ) ); ?></div>
+                </nav>
+
+            <?php endif; ?>
             <?php /* if ($paged > 1) { ?>
 
                 <nav id="nav-posts">
@@ -32,7 +34,7 @@
 
             <?php }  */?>
 
-            <?php wp_reset_postdata(); ?>
+            <?php wp_reset_query(); ?>
 
         </section>
     </div>

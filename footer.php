@@ -23,5 +23,9 @@
 </div>
 </div>
 </div>
+
+<?php wp_footer(); ?>
+
+<script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/build/js/production.min.js"></script>
 </body>
 </html>

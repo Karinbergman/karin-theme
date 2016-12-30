@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo get_bloginfo('name'); ?></title>
 
     <?php
@@ -19,17 +19,24 @@
 </head>
 <body>
 <div id="wrapper">
-    <header class="page-header">
+    <div id="nav" class="navbar">
+        <div class="navbar-inner">
+            <div class="container">
+                <?php if ( is_front_page()) { ?>
+                    <h1>
+                        <a class="brand" href="<?php bloginfo( 'wpurl' );?>"><?= get_bloginfo('name'); ?></a>
+                    </h1>
+                <?php } else { ?>
+                    <h2>
+                        <a class="brand" href="<?php bloginfo( 'wpurl' );?>"><?= get_bloginfo('name'); ?></a>
+                    </h2>
+                <?php } ?>
 
-        <?php if ( is_front_page()) { ?>
-        <h1>
-            <a href="<?php bloginfo( 'wpurl' );?>"><?php echo get_bloginfo('name'); ?></a>
-        </h1>
-        <?php } else { ?>
-        <h2>
-            <a href="<?php bloginfo( 'wpurl' );?>"><?php echo get_bloginfo('name'); ?></a>
-        </h2>
-        <?php } ?>
-        <div class="description"><?php echo get_bloginfo('description'); ?></div>
-    </header>
+                <a class="btn btn-navbar open" data-toggle="collapse" data-target=".nav-collapse"></a>
+                <div class="nav-collapse collapse">
+                    <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
 
