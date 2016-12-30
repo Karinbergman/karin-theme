@@ -15,19 +15,20 @@ module.exports = function(grunt) {
 			dist: {
 				files: [
 					{ flatten: true, expand: true, src: ['assets/images/*'], dest: 'build/images/', filter: 'isFile' },
-				]
-			},
+					{ flatten: true, expand: true, src: ['assets/fonts/*'], dest: 'build/fonts/', filter: 'isFile' }
+                ]
+			}
 		},
 
 		// merge all the js-files with concat
 		concat: {
 			options: {
-				separator: ';',
+				separator: ';'
 			},
 			dist: {
 				src: ['assets/js/libs/*.js', 'assets/js/app.js'],
-				dest: 'grunt-tmp/production.js',
-			},
+				dest: 'grunt-tmp/production.js'
+			}
 		},
 
 		// uglify files
@@ -119,11 +120,11 @@ module.exports = function(grunt) {
 			},
 			sass: {
 				files: ['assets/scss/*.scss','assets/scss/*/*.scss'],
-				tasks: ['sass', 'postcss'],
+				tasks: ['sass', 'postcss']
 			},
 			images: {
-				files: ['assets/images/*.{png,jpg,gif}'],
-				tasks: ['copy', 'imagemin'],
+				files: ['assets/images/*.{png,jpg,gif}', 'assets/fonts/*'],
+				tasks: ['copy', 'imagemin']
 			},
 		},
 
