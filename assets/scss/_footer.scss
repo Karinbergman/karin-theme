@@ -3,4 +3,11 @@
   padding: 20px;
   border: 1px solid #ddd;
   clear: both;
+  margin: 10px;
+
+  #footer-sidebar1,
+  #footer-sidebar2,
+  #footer-sidebar3 {
+    width: 33.333%;
+  }
 }

@@ -10,9 +10,81 @@ html {
 
   #main {
     clear: both;
+    section {
+      background-color: $bg-white;
+      border: 1px solid #ddd;
+      padding: 0 20px 10px 20px;
+    }
     .content {
       width: 75%;
       float: left;
+
+      section {
+        h2 {
+          padding: 10px 0 0 0;
+          margin-top: 0;
+          margin-bottom: 10px;
+
+          a {
+            font-family: 'Raleway', sans-serif;
+            text-decoration: none;
+            font-size: $font-size-xxl;
+            color: purple;
+          }
+        }
+
+        .moretag {
+          display: block;
+          text-align: right;
+          text-decoration: none;
+          font-weight: 600;
+          color: purple;
+
+          &:after {
+            @extend .icomoon;
+            @extend .icon-arrow-right:before;
+            padding-left: 7px;
+            position: relative;
+            top: 2px;
+            font-size: 16px;
+          }
+        }
+
+        .nav-pager {
+          .nav-before {
+            a {
+              text-decoration: none;
+              color: purple;
+              span {
+                &:before {
+                  @extend .icomoon;
+                  @extend .icon-arrow-left:before;
+                  position: relative;
+                  top: 2px;
+                  font-size: 16px;
+                  padding-right: 5px;
+                }
+              }
+            }
+          }
+          .nav-after {
+            a {
+              text-decoration: none;
+              color: purple;
+              span {
+                &:after {
+                  @extend .icomoon;
+                  @extend .icon-arrow-right:before;
+                  padding-left: 7px;
+                  position: relative;
+                  top: 2px;
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
 
       .post {
         background-color: $bg-white;
@@ -28,6 +100,7 @@ html {
             font-family: 'Raleway', sans-serif;
             text-decoration: none;
             font-size: $font-size-xxl;
+            color: purple;
           }
         }
         h2, p, .moretag {
@@ -38,6 +111,7 @@ html {
           .date {
             padding-right: 10px;
             padding-left: 10px;
+            font-weight: 600;
             &:before {
               @extend .icomoon;
               @extend .icon-calendar:before;
@@ -48,6 +122,11 @@ html {
             }
           }
           .category {
+            a {
+              color: purple;
+              font-weight: 600;
+              text-decoration: none;
+            }
             &:before {
               @extend .icomoon;
               @extend .icon-folder-open:before;
@@ -86,16 +165,18 @@ html {
     clear: both;
     width: 75%;
     float: left;
-    background-color: $bg-white;
-    padding: 10px;
-    margin-bottom: 30px;
-    border: 1px solid #ddd;
+
+    .post-content {
+      background-color: $bg-white;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+    }
 
     .post-info {
       margin-bottom: 10px;
       .date {
         padding-right: 10px;
-        padding-left: 10px;
         &:before {
           @extend .icomoon;
           @extend .icon-calendar:before;
@@ -113,6 +194,47 @@ html {
           font-size: $font-size-xl;
           position: relative;
           top: 1px;
+        }
+      }
+    }
+    .comments {
+      ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+
+        li {
+          background-color: $bg-white;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ddd;
+
+          .meta {
+            text-transform: uppercase;
+          }
+        }
+      }
+      #commentform {
+        background-color: $bg-white;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+
+        input {
+          display: block;
+          width: 50%;
+          height: 35px;
+          padding-left: 5px;
+          border: 1px solid #ddd;
+        }
+
+        textarea {
+          width: 100%;
+          border: 1px solid #ddd;
+        }
+
+        #submit {
+          width: 25%;
         }
       }
     }

@@ -31,6 +31,14 @@
     }
   }
 
+  .textwidget {
+    .about {
+      img {
+        float: left;
+      }
+    }
+  }
+
   #searchform {
     .screen-reader-text {
       display: none;

@@ -11,28 +11,12 @@
 
             <?php endwhile; ?>
 
-            <!-- TODO: fix next and prev links -->
-            <?php if (  $wp_query->max_num_pages > 1 ) : ?>
+            <?php if ( $wp_query->max_num_pages > 1) : ?>
                 <nav class="nav-pager">
-                    <div class="nav-fore"><?php next_posts_link( __( '← Äldre inlägg' ) ); ?></div>
-                    <div class="nav-efter"><?php previous_posts_link( __( 'Nyare inlägg →' ) ); ?></div>
+                    <div class="nav-before"><?php next_posts_link( __( '<span>' . ' Äldre inlägg' . '</span>' ) ); ?></div>
+                    <div class="nav-after"><?php previous_posts_link( __( '<span>' . 'Nyare inlägg' . '</span>' ) ); ?></div>
                 </nav>
-
             <?php endif; ?>
-            <?php /* if ($paged > 1) { ?>
-
-                <nav id="nav-posts">
-                    <div class="prev"><?php next_posts_link('&laquo; Previous Posts'); ?></div>
-                    <div class="next"><?php previous_posts_link('Newer Posts &raquo;'); ?></div>
-                </nav>
-
-            <?php } else { ?>
-
-                <nav id="nav-posts">
-                    <div class="prev"><?php next_posts_link('&laquo; Previous Posts'); ?></div>
-                </nav>
-
-            <?php }  */?>
 
             <?php wp_reset_query(); ?>
 
