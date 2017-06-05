@@ -1,13 +1,11 @@
-#footer {
-  background-color: $bg-white;
-  padding: 20px;
-  border: 1px solid #ddd;
-  clear: both;
-  margin: 10px;
+footer {
+  background-color: $color-light;
+  padding-top: 10px;
+  padding-bottom: 20px;
 
-  #footer-sidebar1,
-  #footer-sidebar2,
-  #footer-sidebar3 {
-    width: 33.333%;
+  .copyright {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
   }
 }

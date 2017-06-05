@@ -1,7 +1,29 @@
+html {
+    font-size: 17px;
+}
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $font-body;
     color: #333;
     font-size: 100%;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+}
+h2 {
+    font-size: 25px;
+}
+h4 {
+    margin-top: 20px;
+    font-weight: 600;
+}
+p {
+    font-family: $font-body3;
+}
+
+a {
+    color: $brand-color;
+
+    &:hover {
+        text-decoration: none;
+        color: #000;
+    }
 }

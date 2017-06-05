@@ -15,8 +15,8 @@ add_action( 'init', 'register_my_menu' );
 
 // Enable footer widgets
 register_sidebar( array(
-    'name' => 'Footer Sidebar 1',
-    'id' => 'footer-sidebar-1',
+    'name' => 'Footer Sidebar Left',
+    'id' => 'footer-sidebar-left',
     'description' => 'Appears in the footer area',
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => '</aside>',
@@ -24,8 +24,8 @@ register_sidebar( array(
     'after_title' => '</h3>',
 ) );
 register_sidebar( array(
-    'name' => 'Footer Sidebar 2',
-    'id' => 'footer-sidebar-2',
+    'name' => 'Footer Sidebar Middle',
+    'id' => 'footer-sidebar-middle',
     'description' => 'Appears in the footer area',
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => '</aside>',
@@ -33,8 +33,8 @@ register_sidebar( array(
     'after_title' => '</h3>',
 ) );
 register_sidebar( array(
-    'name' => 'Footer Sidebar 3',
-    'id' => 'footer-sidebar-3',
+    'name' => 'Footer Sidebar Right',
+    'id' => 'footer-sidebar-right',
     'description' => 'Appears in the footer area',
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => '</aside>',
@@ -60,6 +60,8 @@ register_sidebar(array('name'=>'sidebar2',
 
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'single-post-thumbnail', 590, 180 );
+
+
 
 // inkludera jquery från google i footer
 if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
