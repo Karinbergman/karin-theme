@@ -1,5 +1,7 @@
 .post {
     .category {
+      margin-bottom: 15px;
+      float: left;
       a {
         color: black;
         padding: 5px;
@@ -12,11 +14,20 @@
         }
       }
     }
+  .comment-count {
+    float: right;
+    background-color: rgba(156,39,176,.25);
+    padding: 3px 10px;
+    font-size: 15px;
+  }
   .date-info {
     font-size: 15px;
     .date {
       font-weight: bold;
     }
+  }
+  h2 {
+    clear: both;
   }
   p {
     margin: 10px 0;
