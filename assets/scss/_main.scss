@@ -26,10 +26,69 @@
       font-weight: bold;
     }
   }
-  h2 {
+  h1, h2 {
     clear: both;
   }
   p {
     margin: 10px 0;
+  }
+  // Single post content
+  .post-content {
+    border-bottom: 2px solid #ededed;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+.comments {
+  #commentform {
+    label {
+      display: block;
+    }
+    input {
+      height: 30px;
+    }
+    textarea {
+      width: 100%;
+    }
+    input[type='submit'] {
+      background-color: $color-light;
+      border: none;
+      padding: 0 10px;
+
+      &:hover {
+        background-color: $link-color-hover;
+      }
+    }
+  }
+  .approved-comments {
+    padding-left: 0;
+    list-style-type: none;
+    li {
+      border: 1px solid #ededed;
+      margin-bottom: 10px;
+      clear: both;
+      min-height: 71px;
+      .avatar {
+        float: left;
+        margin-right: 10px;
+      }
+      .meta {
+        margin: 0;
+        font-size: 15px;
+      }
+      p {
+        margin: 10px;
+      }
+      .answer-comment {
+        background-color: $color-light;
+        float: right;
+        padding: 0 10px;
+
+        &:hover {
+          background-color: $link-color-hover;
+        }
+      }
+    }
   }
 }

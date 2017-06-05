@@ -25,7 +25,7 @@
 	<div id="footer-sidebar4" class="col-md-12">
 		<!-- copyright -->
 		<p class="copyright">
-			Copyright &copy; Karin Bergman, <?php bloginfo('name'); ?>, <?php echo date('Y'); ?>
+			Copyright &copy; Karin Bergman, <?php echo date('Y'); ?>
 		</p>
 		<!-- /copyright -->
 	</div>
