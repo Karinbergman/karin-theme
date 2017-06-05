@@ -2,7 +2,7 @@
         <div id="post" class="post col-md-8">
         <?php while ( have_posts() ) : the_post(); ?>
             <div class="post-content">
-                <div class="category"><?php the_category('&nbsp;&rsaquo;&nbsp;'); ?></div>
+                <div class="category"><?php the_category(' '); ?></div>
                 <div class="comment-count"><a href="<?php echo get_comments_link( $post->ID ); ?>"><?php comments_number( '0', '1', '%' ); ?></a></div>
 
                 <h1><?php echo "&nbsp;&rsaquo;&nbsp;"; the_title(); ?></h1>
