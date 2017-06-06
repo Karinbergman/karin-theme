@@ -61,8 +61,6 @@ register_sidebar(array('name'=>'sidebar2',
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'single-post-thumbnail', 590, 180 );
 
-
-
 // inkludera jquery från google i footer
 if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
 function my_jquery_enqueue() {

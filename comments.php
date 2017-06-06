@@ -27,7 +27,7 @@
 			</form>
 		<?php endif; ?>
 	<?php else : ?>
-		<p>The comments are closed.</p>
+		<p>Möjligheten att skriva kommentarer har låsts.</p>
 	<?php endif; ?>
 
 	<?php if($comments) : ?>

@@ -3,9 +3,8 @@
         <?php while ( have_posts() ) : the_post(); ?>
             <div class="post-content">
                 <div class="category"><?php the_category(' '); ?></div>
-                <div class="comment-count"><a href="<?php echo get_comments_link( $post->ID ); ?>"><?php comments_number( '0', '1', '%' ); ?></a></div>
 
-                <h1><?php echo "&nbsp;&rsaquo;&nbsp;"; the_title(); ?></h1>
+                <h1><?php echo the_title(); ?></h1>
 
                 <div class="date-info"><span class="date"><?php the_date('j F, Y'); ?></span></div>
 

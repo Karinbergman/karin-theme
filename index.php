@@ -6,8 +6,6 @@
         <section>
             <?php while ( have_posts() ) : the_post(); ?>
             <div class="post">
-                <div class="category"><?php the_category(' '); ?></div>
-                <div class="comment-count"><a href="<?php echo get_comments_link( $post->ID ); ?>"><?php comments_number( '0', '1', '%' ); ?></a></div>
                 <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
                 <div class="date-info"><span class="date"><?php the_date('j F, Y'); ?></span></div>
 

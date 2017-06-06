@@ -2,19 +2,17 @@
   margin-top: 20px;
   padding: 0 15px;
   .logo {
-    text-align: center;
     margin: 50px 0;
     a {
-      font-size: 80px;
-      font-family: $font-header;
-
       &:hover {
         text-decoration: none;
       }
-
       &:focus {
         text-decoration: none;
         color: #000;
+      }
+      h1 {
+        font-size: 50px;
       }
     }
   }
